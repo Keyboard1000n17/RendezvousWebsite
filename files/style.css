@@ -104,11 +104,10 @@ flex-direction: column;
 float: left;
 background-color: rgba(181, 227, 178, 0.7);
 position: fixed;
-top: 10vh;
+top: 0;
 left: 0;
 backdrop-filter: blur(2.5px);
-/* padding: 0; */
-/* padding-top: 0; */
+padding-top: 11vh;
 color: black;
 width: 18vw;
 height: 100vh;
@@ -130,10 +129,23 @@ figure.images {
 display: flex;
 padding: 10px;
 flex-direction: column;
-background-color: rgba(255, 255, 255, 0.75);
+background-color:  rgba(181, 227, 178, 0.7);
 align-items: center;
+justify-content: center;
 border-radius: 10px;
 color: black;
+text-align: center;
+}
+
+div.images {
+display: flex;
+padding: 10px;
+flex-direction: row;
+flex-wrap: wrap;
+background-color:  rgba(181, 227, 178, 0.7);
+border-radius: 10px;
+color: black;
+justify-content: center;
 }
 
 img.images {
@@ -144,14 +156,24 @@ filter: brightness(70%);
 margin-bottom: 15px;
 }
 
+div.images img.images {
+height: 50vh;
+margin: 15px;
+}
+
+div.images img.images:hover{
+height: 55vh;
+}
+
+
 img.images:hover {
 height: 60vh;
 filter: brightness(100%);
 }
 
 .level-one {
-font-weight: 700;
-font-size: 2.75vh;
+font-weight: 600;
+font-size: 2.625vh;
 }
 
 .level-two {
@@ -199,4 +221,8 @@ border: solid 0.5px black;
 padding: 10px;
 }
 
+ol > li {
+font-weight: 600;
+font-size: 2.375vh;
+}
 /* CONTENT STYLING */
