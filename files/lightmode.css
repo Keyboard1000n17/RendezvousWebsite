@@ -51,7 +51,7 @@ button:hover {
     position: absolute;
     bottom: 1vh;
     right: 1vw;
-    width: 10vw;
+    width: 20vw;
     transition: all ease 0.3s;
 }
 
@@ -249,13 +249,22 @@ ol > li {
 	}
     #linkbar {
         display: none;
-        width: 100vh;
+        position: fixed !important;
+        float: none !important;
+        width: 100vw;
+        height: 100vh;
         padding: 11vh 5vw 0vh 5vw;
+        flex-direction: column !important;
+        top: 0 !important;
+        left: 0 !important;
+        backdrop-filter: blur(2.5px) !important;
     }
     #menuButton {
-        width: 50vw;
+        position: fixed;
+        right: 50vw;
+        width: 90vw;
         bottom: 20vh;
-        left: 25vw;
+        translate: -50% -50%;
         border-radius: 20px;
     }
     #mainLinks a {
@@ -288,8 +297,13 @@ ol > li {
         height: 25vh;
     }
     #menu {
-        left: 5vw;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
         align-self: center;
+        padding: 5vh 7vw;
+        border-radius: 20px;
+        box-sizing: border-box;
     }
     #themes {
         flex-direction: column;

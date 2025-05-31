@@ -12,7 +12,7 @@ menuButton.onclick = () => {
 };
 
 scaleSlider.addEventListener("input", () => {
-	const scaleSize = scaleSlider.value;
+    const scaleSize = scaleSlider.value;
 	document.getElementById("scaleSizeValue").innerHTML = (scaleSize) + "x" ; //Stating to the user in the UI the scale size
 	document.getElementsByTagName("body")[0].style.fontSize = `${scaleSize * 2}vh`; //Adjusting font size
 	document.getElementsByTagName("body")[0].style.marginLeft = `${scaleSize * 20}vw`; //Adjusting left margin of body
@@ -60,19 +60,31 @@ document.getElementById("close").addEventListener("click", () => {
 
 const linkbar = document.getElementById("linkbar");
 
-// if (window.matchMedia("(orientation: portrait)").matches) {
-    // window.alert("Press on the Leafstar text on top to access other articles. Apologies if you have already recieved this message; I ran out of time and couldn't implement cookies.")
-	// document.querySelector("h1").addEventListener("click", () => {
-        // if (window.getComputedStyle(linkbar).display === "none")
-        // linkbar.style.display = "flex"
-    // } else {
-         // linkbar.style.display = "none";
-    // });
-// }
-
-if (window.matchMedia("(orientation: portrait)").matches) {
-    window.alert("Press on the Leafstar text on top to access other articles. Apologies if you have already received this message; I ran out of time and couldn't implement cookies.");
-
+if (window.matchMedia("(orientation: portrait)").matches || window.matchMedia("(max-width: 768px)").matches) {
+    window.alert("Press on the Leafstar text on top to access other articles. Apologies if you have already received this message; I ran out of time and couldn't implement cookies. Also, zooming on a phone is extremely buggy. Use it at your will, but IT WILL BE BUGGY.");
+    
+    scaleSlider.addEventListener("input", () => {
+        const scaleSize = scaleSlider.value;
+        document.getElementById("scaleSizeValue").innerHTML = (scaleSize) + "x" ; //Stating to the user in the UI the scale size
+        document.getElementsByTagName("body")[0].style.fontSize = `${scaleSize * 2}vh`; //Adjusting font size
+        document.getElementById("linkbar").style.paddingTop = `${(scaleSize * 10) + 1}vh`; //Adjusting top padding of linkbar
+        document.getElementById("linkbar").style.height = `${(scaleSize * 100)}vh`;//Adjusting height of linkbar
+        document.getElementById("linkbar").style.width = `${(scaleSize * 100)}vh`;//Adjusting width of linkbar
+        document.getElementsByTagName("nav")[0].style.height = `${(scaleSize * 10)}vh`; //Adjusting height of navbar
+        document.getElementsByTagName("body")[0].style.marginTop =`${(scaleSize * 10) + 1}vh`; //Adjusting top margin of body
+        document.getElementsByTagName("h1")[0].style.fontSize = `${(scaleSize * 4.4)}vh`; //LeafStar h1 element in the navbar
+        document.getElementById("heading").style.fontSize = `${(scaleSize * 4)}vh`; //title of the page IN THE BODY
+        document.getElementById("menuButton").style.bottom = `${(scaleSize * 60)}vh`; //making sure menuButton stays on screen
+        document.getElementsByTagName("body")[0].style.margin = "11vh 5vw 10vh 5vw"; //making sure margin doesn't misbehave
+        document.getElementsByTagName("body")[0].style.marginLeft = "5vw"; //preventing previous one from overriding marginLeft
+        document.querySelectorAll("ol > li").forEach(liElement => {
+            liElement.style.fontSize = `${(scaleSize * 2.375)}vh`;
+        });
+        document.querySelectorAll("summary").forEach(summaryElement => {
+            summaryElement.style.fontSize = `${(scaleSize * 2.625)}vh`;
+        });
+    });//This event listener is supposed to be different from the previous one that changes according to scale size
+    
     document.querySelector("h1").addEventListener("click", () => {
         if (window.getComputedStyle(linkbar).display === "none") {
             document.getElementById("linkbar").style.display = "flex"
