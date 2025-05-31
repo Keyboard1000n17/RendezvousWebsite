@@ -9,7 +9,7 @@
 	<body style="background-image: url(./bg.jpg);">
 		<nav>
 			<h1 style="padding-left: 10px; font-size: 5vh;">Leafstar</h1>
-			<ul>
+			<ul id="mainLinks">
 				<li class="nav"><a href="./index.html" class="nav">Home</a></li> 
 				<li class="nav"><a href="./about" class="nav">About</a></li>
 				<li class="nav"><a href="./sources.html" class="nav">Sources</a></li>
@@ -18,13 +18,28 @@
 		
 		<div id="linkbar">
 			<a href="./index.html">Homepage</a>
-			<a href="./eco-friendliness-at-home.html">Being eco-friendly at home</a>
+			<a href="./eco-friendliness-at-home.html" style="font-weight: bold">Being eco-friendly at home</a>
 			<a href="./eco-friendliness-in-how-we-get-around.html">Being eco-friendly while moving around</a>
 			<a href="./eco-friendliness-with-clothes.html">Being eco-friendly in the field of clothes</a>
 			<a href="./eco-friendliness-with-food.html"> Being eco-friendly with what we eat</a>
 			<a href="./eco-friendliness-in-how-we-travel.html">Being eco-friendly in how we travel</a>
-			<a href="./eco-friendliness-at-work-and-school.html" style="font-weight: bold">Being eco-friendly at work and school</a>
+			<a href="./eco-friendliness-at-work-and-school.html">Being eco-friendly at work and school</a>
+			<button id="menuButton">Menu</button>
 		</div>
+		
+		<div id="menu">
+			<p>Increase size by: <span id="scaleSizeValue"></span></p>
+			<input type="range" value="1" min="1" max="2" step="0.125" id="scaleSlider">
+			<p>Set Line Spacing to: <span id="lineSpacingValue"></span></p>
+			<input type="range" value="1" min="1" max="3" step="0.125" id="lineSpacingSlider">
+			<p>Set theme to: <span id="yippee"></span></p>
+			<div id="themes"> 
+				<button class="themesList" id="default-mode">Default</button>
+				<button class="themesList" id="light-mode">Light</button>
+				<button class="themesList" id="dark-mode">Dark</button>
+			</div>
+			<button id="close">Close</button>
+		</div>		
 		
 		<span id="heading">Eco-friendliness at work and school</span>
 		<p>Sustainability is a key factor in not just the business economy, but also education. Education is at the heart of our society, and it is worthwhile exploring just how schools can embrace this positive change. In an era where both young professionals and experienced employees are looking for more meaning in their work, creating an eco-friendly office culture attracts potential talent and consumers. Companies like Bob’s Red Mill and REI have strong environmental initiatives or are fair trade certified and have some of the strongest employee engagement. Your workplace or school has an opportunity to make a difference that not only instills a sense of purpose and camaraderie with your people, but it can benefit the planet too.</p>

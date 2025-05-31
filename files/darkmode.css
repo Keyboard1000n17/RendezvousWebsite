@@ -216,14 +216,16 @@ img.images:hover {
 
 #menu {
     display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
     width: 80vw;
     height: 80vh;
     background-color: rgb(30, 31, 37);
     position: fixed;
-    top: 5vh;
-    left: 7.5vw;
     border-radius: 10px;
-    padding: 5vh;
+    padding: 2.5vh;
     z-index: 5;
     box-shadow: 0vh 0vh 20px 0px white;
     transition: all ease 0.3s;
@@ -241,4 +243,56 @@ a:hover {
 ol > li {
     font-weight: 600;
     font-size: 2.375vh;
+}
+
+@media only screen and (orientation: portrait) {
+    body {
+	margin: 11vh 5vw 10vh 5vw;
+	}
+    #linkbar {
+        display: none;
+        width: 100vh;
+        padding: 11vh 5vw 0vh 5vw;
+    }
+    #menuButton {
+        width: 50vw;
+        bottom: 20vh;
+        left: 25vw;
+        border-radius: 20px;
+    }
+    #mainLinks a {
+	display: none;
+    }
+    nav {
+        justify-content: center;
+    }
+    div.images {
+        flex-direction: column;
+        border-radius: 20px;
+    }
+    img.images {
+        border-radius: 10px;
+        height: 25vh;
+        filter: none;
+        margin-bottom: 15px;
+    }
+
+    div.images img.images {
+        height: 25vh;
+        margin: 15px;
+    }
+
+    div.images img.images:hover {
+        height: 25vh;
+    }
+
+    img.images:hover {
+        height: 25vh;
+    }
+    #menu {
+        align-self: center;
+    }
+    #themes {
+        flex-direction: column;
+    }
 }

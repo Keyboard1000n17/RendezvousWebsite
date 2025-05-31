@@ -58,9 +58,25 @@ document.getElementById("close").addEventListener("click", () => {
 	document.getElementById("menu").style.display = "none"
 });
 
+const linkbar = document.getElementById("linkbar");
+
+// if (window.matchMedia("(orientation: portrait)").matches) {
+    // window.alert("Press on the Leafstar text on top to access other articles. Apologies if you have already recieved this message; I ran out of time and couldn't implement cookies.")
+	// document.querySelector("h1").addEventListener("click", () => {
+        // if (window.getComputedStyle(linkbar).display === "none")
+        // linkbar.style.display = "flex"
+    // } else {
+         // linkbar.style.display = "none";
+    // });
+// }
+
 if (window.matchMedia("(orientation: portrait)").matches) {
-    const linkbar = document.getElementById("linkbar");
-	document.querySelector("h1").addEventListener("click", () => {
-    linkbar.style.display = "flex";
-	})
-}
+    window.alert("Press on the Leafstar text on top to access other articles. Apologies if you have already received this message; I ran out of time and couldn't implement cookies.");
+
+    document.querySelector("h1").addEventListener("click", () => {
+        if (window.getComputedStyle(linkbar).display === "none") {
+            document.getElementById("linkbar").style.display = "flex"
+        } else {
+            document.getElementById("linkbar").style.display = "none"
+        }
+})};
