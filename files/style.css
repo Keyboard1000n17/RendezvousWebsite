@@ -253,7 +253,7 @@ ol > li {
     #linkbar {
         display: none;
     }
-    #mainLinks {
+    #mainLinks a {
 	display: none;
     }
     h1 {
