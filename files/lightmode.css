@@ -1,6 +1,6 @@
 /* Use a find feature to look for a specific style! It makes your life easier. */
 nav {
-    background-color: rgba(181, 227, 178, 0.7);
+    background-color: rgba(220, 220, 220, 0.7);
     backdrop-filter: blur(2.5px);
     position: fixed;
     top: 0;
@@ -47,7 +47,7 @@ button:hover {
 }
 
 #close {
-    background-color: rgb(181, 227, 178);
+    background-color: rgb(200, 200, 200);
     position: absolute;
     bottom: 1vh;
     right: 1vw;
@@ -56,13 +56,10 @@ button:hover {
 }
 
 #close:hover {
-    background-color: rgb(191, 237, 188);
-    height: 12vh;
-    width: 12vw;
+    background-color: rgb(210, 210, 210);
 }
 
 #menuButton {
-    background-color: rgb(181, 227, 178);
     position: fixed;
     bottom: 15vh;
 }
@@ -72,7 +69,7 @@ body {
     font-family: Segoe UI;
     font-size: 2vh;
     background-attachment: fixed;
-    color: #FFFFFF;
+    color: #000000;
     overflow-x: hidden;
     background-size: cover;
     background-position: center;
@@ -89,7 +86,7 @@ body {
     display: flex;
     flex-direction: column;
     float: left;
-    background-color: rgba(181, 227, 178, 0.7);
+    background-color: rgba(200, 200, 200, 0.7);
     position: fixed;
     top: 0;
     left: 0;
@@ -171,7 +168,7 @@ figure.images {
     display: flex;
     padding: 10px;
     flex-direction: column;
-    background-color: rgba(181, 227, 178, 0.7);
+    background-color: rgba(200, 200, 200, 0.7);
     align-items: center;
     justify-content: center;
     border-radius: 10px;
@@ -221,7 +218,7 @@ img.images:hover {
     display: none;
     width: 80vw;
     height: 80vh;
-    background-color: #3A8658;
+    background-color: rgb(234, 236, 240);
     position: fixed;
     top: 5vh;
     left: 7.5vw;
@@ -244,19 +241,4 @@ a:hover {
 ol > li {
     font-weight: 600;
     font-size: 2.375vh;
-}
-
-@media only screen and (orientation: portrait) {
-    body {
-	margin: 11vh 2vw 10vh 2vw;
-	}
-    #linkbar {
-        display: none;
-    }
-    #mainLinks {
-	display: none;
-    }
-    h1 {
-        
-    }
 }

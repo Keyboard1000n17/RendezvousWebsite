@@ -9,7 +9,7 @@
 	<body style="background-image: url(./bg.jpg);" class="body">
 		<nav>
 			<h1 style="padding-left: 10px; font-size: 5vh;">Leafstar</h1>
-			<ul>
+			<ul id="mainLinks">
 				<li class="nav"><a href="./index.html" class="nav">Home</a></li> 
 				<li class="nav"><a href="./about" class="nav">About</a></li>
 				<li class="nav"><a href="./sources.html" class="nav">Sources</a></li>
@@ -27,12 +27,21 @@
 			<button id="menuButton">Menu</button>
 		</div>
 		
-		<form id="menu">
+		<div id="menu">
 			<p>Increase size by: <span id="scaleSizeValue"></span></p>
-			<input type="range" min="1" max="2" step="0.125" id="scaleSlider">
-		</form>
+			<input type="range" value="1" min="1" max="2" step="0.125" id="scaleSlider">
+			<p>Set Line Spacing to: <span id="lineSpacingValue"></span></p>
+			<input type="range" value="1" min="1" max="3" step="0.125" id="lineSpacingSlider">
+			<p>Set theme to: <span id="yippee"></span></p>
+			<div id="themes"> 
+				<button class="themesList" id="default-mode">Default</button>
+				<button class="themesList" id="light-mode">Light</button>
+				<button class="themesList" id="dark-mode">Dark</button>
+			</div>
+			<button id="close">Close</button>
+		</div>		
 		
-		<span id="heading" style="text-align: right;">Being eco-friendly at home</span>
+		<span id="heading">Being eco-friendly at home</span>
 		<p>While homes may not pollute as much as corporations do, there are many things you can do to make your home a more eco friendly house. It is important to make a change wherever possible after all, and your home is something you have control over - so why not make the change? Here is a list of things you can do, from home improvements that require significant up-front capital to small, easy changes that can have a big impact. Smart home technology is becoming more affordable. You don’t need to break the bank to modernize your home. For those on a budget, affordable smart home solutions in Qatar are available without compromising quality.</p>
 		
 		<details>
