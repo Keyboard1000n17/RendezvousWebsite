@@ -252,11 +252,39 @@ ol > li {
 	}
     #linkbar {
         display: none;
+        width: 100vh;
+    }
+    #menuButton {
+        width: 90%;
+        bottom: 10vh;
     }
     #mainLinks a {
 	display: none;
     }
-    h1 {
-        
+    nav {
+        justify-content: center;
+    }
+    div.images {
+        flex-direction: column;
+        border-radius: 20px;
+    }
+    img.images {
+        border-radius: 10px;
+        height: 25vh;
+        filter: none;
+        margin-bottom: 15px;
+    }
+
+    div.images img.images {
+        height: 25vh;
+        margin: 15px;
+    }
+
+    div.images img.images:hover {
+        height: 25vh;
+    }
+
+    img.images:hover {
+        height: 25vh;
     }
 }

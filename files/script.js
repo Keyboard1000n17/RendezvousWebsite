@@ -57,3 +57,10 @@ themesList[2].addEventListener("click", () => {
 document.getElementById("close").addEventListener("click", () => {
 	document.getElementById("menu").style.display = "none"
 });
+
+if (window.matchMedia("(orientation: portrait)").matches) {
+    const linkbar = document.getElementById("linkbar");
+	document.querySelector("h1").addEventListener("click", () => {
+    linkbar.style.display = "flex";
+	})
+}
