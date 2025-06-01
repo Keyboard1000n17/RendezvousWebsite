@@ -83,7 +83,8 @@ if (window.matchMedia("(orientation: portrait)").matches || window.matchMedia("(
         document.querySelectorAll("summary").forEach(summaryElement => {
             summaryElement.style.fontSize = `${(scaleSize * 2.625)}vh`;
         });
-    });//This event listener is supposed to be different from the previous one that changes according to scale size
+    });
+    //This event listener is supposed to be different from the previous one that changes according to scale size
     
     document.querySelector("h1").addEventListener("click", () => {
         if (window.getComputedStyle(linkbar).display === "none") {

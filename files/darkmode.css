@@ -1,6 +1,12 @@
 /* Use a find feature to look for a specific style! It makes your life easier. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 nav {
-    background-color: rgba(40, 41, 47, 0.5);
+    background-color: rgba(40, 41, 47, 0.8);
     backdrop-filter: blur(2.5px);
     position: fixed;
     top: 0;
@@ -43,24 +49,25 @@ button {
 }
 
 #close {
-    background-color: rgb(100, 101, 107);
+    background-color: rgb(90, 91, 97);
+    height: 10vh;
     position: absolute;
     bottom: 1vh;
     right: 1vw;
-    color: white;
     width: 20vw;
     transition: all ease 0.3s;
 }
 
 #close:hover {
-    background-color: rgb(90, 91, 97);
-    width: 12vw;
+    background-color: rgb(100, 101, 107);
     height: 12vh;
+    width: 24vw;
 }
 
 #menuButton {
-    color: white;
     background-color: rgb(100, 101, 107);
+    position: fixed;
+    bottom: 15vh;
 }
 
 body {
@@ -68,7 +75,7 @@ body {
     font-family: Segoe UI;
     font-size: 2vh;
     background-attachment: fixed;
-    color: #FFFFFF;
+    color: #ffffff;
     overflow-x: hidden;
     background-size: cover;
     background-position: center;
@@ -85,17 +92,16 @@ body {
     display: flex;
     flex-direction: column;
     float: left;
-    background-color: rgba(40, 41, 47, 0.5);
+    background-color: rgba(40, 41, 47, 0.8);
     position: fixed;
     top: 0;
     left: 0;
-    overflow-y: scroll;
     backdrop-filter: blur(2.5px);
     padding-top: 11vh;
-    padding-bottom: 11vh;
     color: black;
     width: 18vw;
     height: 100vh;
+    overflow-y: scroll;
 }
 
 #linkbar a {
@@ -107,7 +113,7 @@ body {
 }
 
 #linkbar a:hover {
-    color: #A478F0;
+    color: #a478f0;
 }
 
 input {
@@ -116,21 +122,21 @@ input {
     background-color: rgba(181, 227, 178, 1);
     border-radius: 10px;
     width: 60%;
-    height: 10px;
+    height: 0.75vh;
 }
 
 input::-webkit-slider-thumb {
     appearance: none;
-    width: 15px;
-    height: 15px;
+    width: 1.5vh;
+    height: 1.5vh;
     background-color: rgba(98 ,186 ,92, 1);
     border-radius: 100px;
 }
 
 input::moz-range-thumb {
     appearance: none;
-    width: 15px;
-    height: 15px;
+    width: 1.5vh;
+    height: 1.5vh;
     background-color: rgba(98 ,186 ,92, 1);
     border-radius: 100px;
 }
@@ -151,7 +157,7 @@ input::moz-range-thumb {
 }
 
 #light-mode {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
 
 #dark-mode {
@@ -172,7 +178,7 @@ figure.images {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    color: white;
+    color: black;
     text-align: center;
 }
 
@@ -181,7 +187,7 @@ div.images {
     padding: 10px;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: rgba(234, 236, 240, 0.7);
+    background-color: rgba(200, 200, 200, 0.7);
     border-radius: 10px;
     color: black;
     justify-content: center;
@@ -216,21 +222,21 @@ img.images:hover {
 
 #menu {
     display: none;
-    top: 50%;
-    left: 50%;
     width: 80vw;
     height: 80vh;
     background-color: rgb(30, 31, 37);
     position: fixed;
+    top: 5vh;
+    left: 7.5vw;
     border-radius: 10px;
-    padding: 2.5vh;
+    padding: 5vh;
     z-index: 5;
     box-shadow: 0vh 0vh 20px 0px white;
     transition: all ease 0.3s;
 }
 
 a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -261,40 +267,37 @@ ol > li {
     }
     #menuButton {
         position: fixed;
-        right: 50vw;
+        left: 50vw;
         width: 90vw;
         bottom: 20vh;
         translate: -50% -50%;
         border-radius: 20px;
     }
     #mainLinks a {
-	display: none;
+        display: none;
     }
     nav {
-        justify-content: center;
+        justify-content: flex-start;
     }
     div.images {
         flex-direction: column;
+        align-items: center;
         border-radius: 20px;
     }
     img.images {
         border-radius: 10px;
-        height: 25vh;
+        height: auto; width: 60vw;
         filter: none;
         margin-bottom: 15px;
     }
-
     div.images img.images {
-        height: 25vh;
+        height: auto;
+        width: 60vw;
         margin: 15px;
     }
-
-    div.images img.images:hover {
-        height: 25vh;
-    }
-
     img.images:hover {
-        height: 25vh;
+        height: auto;
+        width: 60vw;
     }
     #menu {
         top: 50%;
@@ -303,7 +306,7 @@ ol > li {
         align-self: center;
         padding: 5vh 7vw;
         border-radius: 20px;
-        box-sizing: border-box;
+        box-sizing: content-box;
     }
     #themes {
         flex-direction: column;

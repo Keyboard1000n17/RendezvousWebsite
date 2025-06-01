@@ -54,6 +54,7 @@ button:hover {
 
 #close {
     background-color: rgb(181, 227, 178);
+    height: 10vh;
     position: absolute;
     bottom: 1vh;
     right: 1vw;
@@ -64,7 +65,7 @@ button:hover {
 #close:hover {
     background-color: rgb(191, 237, 188);
     height: 12vh;
-    width: 12vw;
+    width: 24vw;
 }
 
 #menuButton {
@@ -78,7 +79,7 @@ body {
     font-family: Segoe UI;
     font-size: 2vh;
     background-attachment: fixed;
-    color: #FFFFFF;
+    color: #ffffff;
     overflow-x: hidden;
     background-size: cover;
     background-position: center;
@@ -160,7 +161,7 @@ input::moz-range-thumb {
 }
 
 #light-mode {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
 
 #dark-mode {
@@ -239,7 +240,7 @@ img.images:hover {
 }
 
 a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -277,33 +278,30 @@ ol > li {
         border-radius: 20px;
     }
     #mainLinks a {
-	display: none;
+        display: none;
     }
     nav {
-        justify-content: center;
+        justify-content: flex-start;
     }
     div.images {
         flex-direction: column;
+        align-items: center;
         border-radius: 20px;
     }
     img.images {
         border-radius: 10px;
-        height: 25vh;
+        height: auto; width: 60vw;
         filter: none;
         margin-bottom: 15px;
     }
-
     div.images img.images {
-        height: 25vh;
+        height: auto;
+        width: 60vw;
         margin: 15px;
     }
-
-    div.images img.images:hover {
-        height: 25vh;
-    }
-
     img.images:hover {
-        height: 25vh;
+        height: auto;
+        width: 60vw;
     }
     #menu {
         top: 50%;
